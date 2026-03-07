@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: ['http://localhost:5174', 'http://localhost:3000'],
   credentials: true
 }));
 app.use(express.json());
@@ -37,7 +37,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Something went wrong!', error: err.message });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`\n🌱 Smart Farmer Server running on port ${PORT}`);
   console.log(`📍 URL: http://localhost:${PORT}`);
