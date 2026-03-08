@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5174', 'http://localhost:3000'],
+  origin: ['http://localhost:5174', 'http://localhost:3000','https://smartfamer-forntend.vercel.app/'],
   credentials: true
 }));
 app.use(express.json());
